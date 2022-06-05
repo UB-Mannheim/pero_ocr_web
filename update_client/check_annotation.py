@@ -81,7 +81,7 @@ def check_and_process_update_request(config, page_parser):
         print("LOGGING IN")
         print("##############################################################")
         if not log_in(session, config['SETTINGS']['login'], config['SETTINGS']['password'], config['SERVER']['base_url'],
-                      config['SERVER']['authentification'], config['SERVER']['login_page']):
+                      config['SERVER']['authentication'], config['SERVER']['login_page']):
             return False
         print("##############################################################")
 

@@ -39,7 +39,7 @@ def main():
     with requests.Session() as session:
         if not log_in(session, layout_config['SETTINGS']['login'], layout_config['SETTINGS']['password'],
                       layout_config['SERVER']['base_url'],
-                      layout_config['SERVER']['authentification'], layout_config['SERVER']['login_page']):
+                      layout_config['SERVER']['authentication'], layout_config['SERVER']['login_page']):
             module_logger.error('Unable to log into server')
         else:
             while True:

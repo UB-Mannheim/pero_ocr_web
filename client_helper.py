@@ -64,7 +64,7 @@ def check_request(r):
         return False
 
 
-def log_in(session, login, password, base_usr, authentification, login_page):
+def log_in(session, login, password, base_usr, authentication, login_page):
     try:
         r = session.get(base_usr)
     except:
@@ -85,7 +85,7 @@ def log_in(session, login, password, base_usr, authentification, login_page):
         'csrf_token': csrf
     }
 
-    r = session.post(join_url(base_usr, authentification), data=payload)
+    r = session.post(join_url(base_usr, authentication), data=payload)
 
     if not check_request(r) or login_page not in r.url:
         module_logger.info("FAILED")

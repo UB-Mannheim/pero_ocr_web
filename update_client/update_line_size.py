@@ -174,7 +174,7 @@ def download_data(config):
                           login=config['SETTINGS']['login'],
                           password=config['SETTINGS']['password'],
                           base_usr=config['SERVER']['base_url'],
-                          authentification=config['SERVER']['authentification'],
+                          authentication=config['SERVER']['authentication'],
                           login_page=config['SERVER']['login_page']):
                 print(f'ERROR: Error during logging in.')
                 exit(-1)
@@ -251,7 +251,7 @@ def upload_data(config):
                       login=config['SETTINGS']['login'],
                       password=config['SETTINGS']['password'],
                       base_usr=config['SERVER']['base_url'],
-                      authentification=config['SERVER']['authentification'],
+                      authentication=config['SERVER']['authentication'],
                       login_page=config['SERVER']['login_page']):
             print(f'ERROR: Error during logging in.')
             exit(-1)

@@ -165,7 +165,7 @@ def main():
             with requests.Session() as session:
                 if not log_in(session, config['SETTINGS']['login'], config['SETTINGS']['password'],
                               config['SERVER']['base_url'],
-                              config['SERVER']['authentification'], config['SERVER']['login_page']):
+                              config['SERVER']['authentication'], config['SERVER']['login_page']):
                     module_logger.error('Unable to log into server')
                     time.sleep(timeout)
                     continue
