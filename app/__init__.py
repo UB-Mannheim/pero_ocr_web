@@ -26,7 +26,6 @@ from app.auth.general import create_user
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-    app.config['APPLICATION_ROOT'] = '/pero'
     init_db()
     #add_delete_user_for_deleted_documents()
     Bootstrap(app)
