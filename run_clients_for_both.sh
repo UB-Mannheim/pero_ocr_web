@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 source ~/python_environment/pero_ocr_web_clients/bin/activate
-export PYTHONPATH=/home/pero/pero/pero-ocr:/home/pero/pero/pero_ocr_web
+(
+cd ..
+export PYTHONPATH=$PWD/pero-ocr:$PWD/pero_ocr_web
+)
 export TF_CUDNN_USE_AUTOTUNE=0
 
 LOG_DATE=$(date '+%Y%m%d%H%M%S')
