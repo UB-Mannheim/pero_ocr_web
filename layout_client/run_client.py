@@ -1,6 +1,7 @@
 import requests
 import sys
 import os
+import pprint
 import time
 import configparser
 import shutil
@@ -32,7 +33,10 @@ def check_and_process_layout_request(config, session, gpu_mode):
 
     r = session.get(join_url(base_url, layout_analysis_get_request_route))
 
+    print("r=")
+    pprint.pprint(r)
     request_json = r.json()
+    print("done")
 
     if 'document' not in request_json.keys():
         return False
