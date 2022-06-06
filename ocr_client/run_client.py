@@ -264,6 +264,7 @@ def get_xmls(session, base_url, get_xml_route, image_ids, xmls_folder):
 
 
 def unzip_model_response(response, models_folder):
+    print("Content-Disposition", response.headers["Content-Disposition"])
     model_type_folder_name = re.findall("filename=(.+)", response.headers["Content-Disposition"])[0].split('.')[0]
     model_type_folder_name = os.path.join(models_folder, model_type_folder_name)
     os.makedirs(model_type_folder_name)
