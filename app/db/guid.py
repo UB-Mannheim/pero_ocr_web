@@ -16,6 +16,8 @@ class GUID(TypeDecorator):
 
     impl = TypeEngine
 
+    cache_ok = False
+
     def load_dialect_impl(self, dialect):
         """ When using Postgres database, use the Postgres UUID column type.
             Otherwise, use String column type. """
