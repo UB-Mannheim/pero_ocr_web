@@ -66,7 +66,7 @@ def apply_rules(text, rules, weird_characters):
 def main():
     args = parseargs()
 
-    database_url = 'sqlite:///' + args.database
+    database_url = args.database
     engine = create_engine(database_url, convert_unicode=True, connect_args={'check_same_thread': False})
     db_session = scoped_session(sessionmaker(autocommit=False,
                                              autoflush=False,

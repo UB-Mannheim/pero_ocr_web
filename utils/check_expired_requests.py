@@ -13,8 +13,6 @@ from config import Config as pero_config
 
 def parseargs():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-u', '--user', type=str, default='postgres')
-    parser.add_argument('-p', '--password', type=str, default='pero')
     parser.add_argument('-d', '--database', type=str, required=True, help="Database.")
     parser.add_argument('-e', '--expiration-time', type=int, default=5, help="Minimal time for expiration.")
     parser.add_argument('-a', '--job-attempts-limit', type=int, default=4, help="Maximum attempts for one job.")
@@ -27,7 +25,7 @@ def main():
 
     pero_ocr_web_config = vars(pero_config)
 
-    database_url = 'postgresql://{}:{}@localhost:5432/{}'.format(args.user, args.password, args.database)
+    database_url = args.database
     engine = create_engine(database_url, convert_unicode=True)
     db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
