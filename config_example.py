@@ -1,7 +1,8 @@
 import os
 
 pero_ocr_web_data = os.environ['HOME'] + '/data/pero_ocr_web_data'
-database_url = 'sqlite:///' + pero_ocr_web_data + '/db.sqlite'
+database_url = 'postgresql://postgres:pero@localhost:5432/pero_ocr_web'
+# database_url = 'sqlite:///' + pero_ocr_web_data + '/db.sqlite'
 
 class Config(object):
     DEBUG = False
