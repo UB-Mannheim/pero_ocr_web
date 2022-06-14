@@ -189,6 +189,8 @@ def check_and_process_ocr_request(config, session, gpu_mode):
     output_xmls_folder = os.path.join(output_folder, "page")
     output_logits_folder = os.path.join(output_folder, "logits")
     no_output = False
+    number_of_xmls = 0
+    number_of_logits = 0
     if os.path.isdir(output_xmls_folder) and os.path.isdir(output_logits_folder):
         number_of_xmls = len(os.listdir(output_xmls_folder))
         number_of_logits = len(os.listdir(output_logits_folder))
