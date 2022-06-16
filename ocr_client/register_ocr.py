@@ -23,6 +23,7 @@ ocr_engines = [
                                                        gathered from Deutschen Textarchiv."},
     {"name": "Czech Fraktur Printed", "description": "Detector of historic czech printed text. Type of script is \
                                                        mainly Fraktur."},
+    {"name": "Czech Printed (Modern German style)", "description": "Model for Czech and European prints and typewritten documents in standard or \"antiqua\" fonts. Most suitable for modern prints, older newspapers scanned from microfilms and otherwise corrupted documents. Some European languages and fonts are supported to a limited extent and recognition quality may vary."},
     {"name": "Lidove Noviny", "description": "Detector of old Lidové Noviny. The detector was trained on IMPACT dataset and \
                                               pages of old Lidové Noviny provided by Moravian Library."},
     {"name": "Czech Handwritten", "description": "Detector of czech handwritten documents."}
