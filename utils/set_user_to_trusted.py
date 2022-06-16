@@ -17,7 +17,7 @@ def main():
     args = parseargs()
 
     database_url = args.database
-    engine = create_engine(database_url, convert_unicode=True, connect_args={'check_same_thread': False})
+    engine = create_engine(database_url, convert_unicode=True)
     db_session = scoped_session(sessionmaker(autocommit=False,
                                              autoflush=False,
                                              bind=engine))
