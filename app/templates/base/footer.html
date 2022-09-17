@@ -3,7 +3,8 @@
     <div class="container d-flex text-center">
         <div class="mx-auto">
             <a href="https://www.mzk.cz/"
-                ><img class="mx-3 my-2" src="/static/img/mzk_logo.png" alt="Moravská zemská knihovna v Brně"
+                  <a class="nav-link my-2" href="{{ url_for('document.documents') }}"><strong>Documents</strong></a>
+		  ><img class="mx-3 my-2" src="{{ url_for('static', filename='img/mzk_logo.png') }}" alt="Moravská zemská knihovna v Brně"
             /></a>
             <a href="https://www.fit.vutbr.cz/"
                 ><img class="mx-3 my-2" src="/static/img/fit_logo.png" alt="Fakulta informačních technologií VUT v Brně"
