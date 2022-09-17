@@ -15,7 +15,8 @@ def parseargs():
 
 language_model_engines = [
     {"name": "NONE", "description": "Don't use any language model."},
-    {"name": "Czech Lidove noviny", "description": "Czech language model tuned for papers (Lidové noviny) from the end of Austro-Hungarian Empire."}
+    {"name": "Czech Lidove noviny", "description": "Czech language model tuned for papers (Lidové noviny) from the end of Austro-Hungarian Empire."},
+    {"name": "German", "description": "German language model."}
 ]
 
 
